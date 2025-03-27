@@ -1,69 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Story & Image Generator</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Story & Image Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <script type="importmap">
+    /> -->
+  <script type="importmap">
       {
         "imports": {
           "@google/generative-ai": "https://esm.run/@google/generative-ai"
         }
       }
     </script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="header">
-        <h1>
-          AI Story Generator by ATRIA CODE CLUB
-          <img
-            src="img.png"
-            alt=""
-            class="profile-img"
-          />
-        </h1>
+</head>
+
+<body>
+  <div class="logo-container">
+    <img src="img.png" alt="Atria Code Club Logo" class="logo">
+  </div>
+  <div class="container">
+    <div class="header">
+      <h1>
+        ATRIA CODE CLUB
+      </h1>
+      <h3>AI Story Generator</h3>
+    </div>
+    <div class="story-generator z-depth-5">
+      <div class="input-group">
+        <textarea id="story-input" placeholder="Enter your story prompt here..." rows="10"></textarea>
+        <button id="generate-story-btn" class="btn purple darken-4">
+          Generate Story
+        </button>
+        <button id="generate-photo-btn" class="btn purple darken-4">
+          Generate Photo
+        </button>
       </div>
-      <div class="story-generator z-depth-5">
-        <div class="input-group">
-          <textarea
-            id="story-input"
-            placeholder="Enter your story prompt here..."
-            rows="10"
-          ></textarea>
-          <button id="generate-story-btn" class="btn purple darken-4">
-            Generate Story
-          </button>
-          <button id="generate-photo-btn" class="btn purple darken-4">
-            Generate Photo
-          </button>
-        </div>
-        <div id="spinner" class="spinner-wrapper">
-          <div class="spinner"></div>
-        </div>
-        <div id="generated-content" class="generated-content"></div>
+      <div id="spinner" class="spinner-wrapper">
+        <div class="spinner"></div>
       </div>
+      <div id="generated-content" class="generated-content"></div>
+    </div>
+    <div class="footer-footer">
       <footer class="footer">
-        <p>
-          &copy; All rights reserved. Story & Image Generator by
-          <span
-            ><a href="https://youtube.com/@code-with-Bharadwaj"
-              >Bharadwaj</a
-            ></span
-          >
-        </p>
+        &copy; Avocation by <a href="https://github.com/UJESH2K">Ujesh Kumar Yadav</a> and <a
+          href="https://github.com/Jrine0">Jitin Raju</a>
       </footer>
     </div>
-    <script type="module" src="index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  </body>
+  </div>
+  <script type="module" src="index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
 </html>
