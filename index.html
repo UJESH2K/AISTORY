@@ -32,9 +32,22 @@
       <h1>
         ATRIA CODE CLUB
       </h1>
-      <h3>AI Story Generator</h3>
+      <h3>AI Story Weavers</h3>
     </div>
     <div class="story-generator z-depth-5">
+      <div class="input-group">
+        <label for="story-genre">Select Genre:</label>
+        <select id="story-genre">
+          <option value="fantasy">Fantasy</option>
+          <option value="horror">Horror</option>
+          <option value="mystery">Mystery</option>
+          <option value="romance">Romance</option>
+          <option value="sci-fi">Sci-Fi</option>
+          <option value="adventure">Adventure</option>
+        </select>
+       
+      </div>
+      
       <div class="input-group">
         <textarea id="story-input" placeholder="Enter your story prompt here..." rows="10"></textarea>
         <button id="generate-story-btn" class="btn purple darken-4">

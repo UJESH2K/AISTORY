@@ -18,6 +18,8 @@ storyInput.addEventListener("blur", handleTextAreaBlur);
 
 async function generateStory() {
   const storyInput = document.getElementById("story-input").value;
+  const genre = document.getElementById("story-genre").value; // Get selected genre
+
   const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
@@ -26,7 +28,7 @@ async function generateStory() {
   spinner.style.display = "flex";
 
   try {
-    const result = await model.generateContent(storyInput);
+    const result = await model.generateContent(`Genre: ${genre}. ${storyInput}`);
     const response = await result.response;
     let story = await response.text();
 
@@ -44,6 +46,7 @@ async function generateStory() {
     spinner.style.display = "none";
   }
 }
+
 
 function displayStory(story) {
   const generatedContent = document.getElementById("generated-content");
